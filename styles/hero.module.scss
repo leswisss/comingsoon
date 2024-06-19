@@ -72,7 +72,7 @@
 
 .slogan_wrapper {
   position: absolute;
-  top: 45%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   color: white;
@@ -125,6 +125,10 @@
 @media screen and (max-width: 628px) {
   .hero_image {
     clip-path: polygon(15% 60%, 85% 60%, 85% 100%, 15% 100%);
+  }
+
+  .marquee {
+    bottom: 1.5rem;
   }
 
   .text {

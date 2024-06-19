@@ -48,6 +48,14 @@
 
 //RESPONSIVE DESIGN
 @media screen and (max-width: 628px) {
+  .navigation{
+    height: calc(var(--header-height) - 1rem);
+  }
+
+  .nav_wrapper{
+    height: calc(var(--header-height) - 1rem);
+  }
+
   .location_wrapper{
     display: none;
   }

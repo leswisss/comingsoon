@@ -1,0 +1,32 @@
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.cursor{
+  width: 100px;
+  height: 20px;
+  background-color: rgb(217, 217, 217);
+  display: grid;
+  place-items: center;
+  position: absolute;
+  z-index: 2;
+  pointer-events: none;
+
+  span{
+    font-size: calc(var(--small-font-size) - 0.3rem);
+    color: black;
+    letter-spacing: 0.05rem;
+    text-transform: uppercase;
+  }
+}
+
+@media screen and (max-width: 460px) {
+  .content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+}

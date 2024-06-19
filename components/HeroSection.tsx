@@ -1,11 +1,13 @@
 "use client";
 
-import React, { useRef } from "react";
+import React, { useRef, useEffect, useState } from "react";
 import Marquee from "./Marquee";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import Image from "next/image";
 import IMAGE from "../public/background.jpg";
+import IMAGE2 from "../public/background2.jpg"
+import IMAGE3 from "../public/background3.jpg"
 import styles from "../styles/hero.module.scss";
 
 const HeroSection = ({
@@ -115,11 +117,35 @@ const HeroSection = ({
     return body;
   };
 
+  //Handle Images Sizes
+  //IMAGE MAMAGEMENT
+  const [imageSet, setImage] = useState(IMAGE);
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (typeof window !== "undefined" && window.innerWidth < 550) {
+        setImage(IMAGE3);
+      } else if (typeof window !== "undefined" && window.innerWidth < 900) {
+        setImage(IMAGE2);
+      } else {
+        setImage(IMAGE);
+      }
+    };
+
+    handleResize();
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   return (
     <section className={styles.hero}>
       <div className={styles.hero_image} ref={heroRef}>
         <Image
-          src={IMAGE}
+          src={imageSet}
           fill
           quality={100}
           alt="Better Marque"

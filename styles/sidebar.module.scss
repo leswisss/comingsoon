@@ -1,6 +1,6 @@
 .sidebar {
   width: 100vw;
-  height: 100dvh;
+  height: 100vh;
   position: fixed;
   top: 0;
   right: 0;
@@ -13,16 +13,17 @@
 
 .sidebar_wrapper {
   width: 100vw;
-  height: 100dvh;
+  height: 100vh;
   min-width: 100vw;
 }
 
 .side__container {
-  height: 100dvh;
+  height: 100vh;
   padding: 2rem 0 3rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  gap: 2rem;
 }
 
 .header {
@@ -172,7 +173,7 @@
     }
 
     .left__content {
-      gap: 2rem;
+      gap: 1.5rem;
 
       .getin {
         font-size: calc(var(--h1-font-size) + 0.5rem);
@@ -199,11 +200,15 @@
 
 
 @media screen and (max-width: 460px) {
+  .side__container {
+    padding: 1.5rem 0 1.5rem;
+  }
+
   .content {
     height: calc(87vh - 3.5rem);
 
     .left__content {
-      gap: 2rem;
+      gap: 1.5rem;
 
       .getin {
         font-size: calc(var(--h1-font-size));
@@ -212,6 +217,10 @@
       .getintext {
         font-size: calc(var(--h2-font-size));
       }
+    }
+
+    .right__content {
+      gap: 1.5rem;
     }
   }
 }

@@ -1,0 +1,1 @@
+const transition = { duration: 0.7, ease: [0.7, 0, 0.3, 1] };

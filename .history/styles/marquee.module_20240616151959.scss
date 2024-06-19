@@ -1,0 +1,12 @@
+.slider{
+  position: relative;
+  white-space: nowrap;
+  display: flex;
+}
+
+.coming__wrapper{
+  display: flex;
+  white-space: nowrap;
+  flex-wrap: nowrap;
+  gap: 3rem;
+}

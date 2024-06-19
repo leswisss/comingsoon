@@ -1,0 +1,89 @@
+.hero{
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+.hero_image{
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  transform: translateY(100%);
+  transform-origin: center center;
+  clip-path: polygon(40% 55%, 60% 55%, 60% 100%, 40% 100%);
+
+  img{
+    object-fit: cover;
+    filter: brightness(0.8);
+  }
+}
+
+.text{
+  position: absolute;
+  color: white;
+  z-index: 1;
+  width: max-content;
+  height: max-content;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-wrap: wrap;
+  width: 55rem;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+
+  .word_wrapper{
+    font-size: var(--h1-font-size);
+    overflow: hidden;
+    width: auto;
+    height: 56.8px;
+    padding: 0 0.3rem;
+
+    &.italic{
+      font-family: var(--italic-font);
+    }
+
+    .word{
+      position: relative;
+      top: 100%; // What i will be animating with gsap
+    }
+  }
+}
+
+.marquee{
+  position: absolute;
+  width: 100%;
+  height: max-content;
+  bottom: 2.5rem;
+  left: 0;
+  z-index: 1;
+  max-width: 2000px;
+  overflow: hidden;
+
+  .marqueee{
+    position: relative;
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
+
+.slogan_wrapper{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  
+  .s_wrap{
+    fon
+    &:nth-last-of-type(2){
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  }
+
+}

@@ -1,0 +1,20 @@
+.slider{
+  position: relative;
+}
+
+.coming__wrapper{
+  display: flex;
+  white-space: nowrap;
+  flex-wrap: nowrap;
+
+  .soon{
+    margin-right: 5rem;
+    font-size: calc(var(--h2-font-size) - 0.6rem);
+  }
+
+  &:nth-of-type(2){
+    position: absolute;
+    left: 10%;
+    top: 0;
+  }
+}

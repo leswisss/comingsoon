@@ -1,0 +1,22 @@
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.cursor{
+  width: 70px;
+  height: 25px;
+  background-color: rgb(217, 217, 217);
+  display: grid;
+  place-items: center;
+  position: relarive;
+  z-index: 2;
+  pointer-events: none;
+
+  span{
+    font-size: calc(var(--small-font-size) - 0.1rem);
+    color: black;
+    letter-spacing: 1px;
+  }
+}

@@ -4,6 +4,7 @@ import React, { useRef, useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import gsap from "gsap";
 import { scaleAnimation } from "@/animations";
+import { useGSAP } from "@gsap/react";
 import TextCopy from "./TextCopy";
 import styles from "../styles/contacts.module.scss";
 

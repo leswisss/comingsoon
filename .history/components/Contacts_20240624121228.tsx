@@ -4,6 +4,7 @@ import React, { useRef, useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import gsap from "gsap";
 import { scaleAnimation } from "@/animations";
+import { useGSAP } from "@gsap/react";
 import TextCopy from "./TextCopy";
 import styles from "../styles/contacts.module.scss";
 
@@ -48,6 +49,7 @@ export default Contacts;
 const Cursor = ({ boundary, cursor, copyStatus }: { boundary: any; cursor: any; copyStatus: any }) => {
   const cursorRef = useRef<HTMLDivElement>(null);
 
+  
   useEffect(() => {
     if (!boundary.current) return;
 

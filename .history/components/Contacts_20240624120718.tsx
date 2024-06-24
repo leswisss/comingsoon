@@ -1,9 +1,10 @@
 "use client";
 
-import React, { useRef, useState, useEffect } from "react";
+import React, { useRef, useState } from "react";
 import { motion } from "framer-motion";
 import gsap from "gsap";
 import { scaleAnimation } from "@/animations";
+import { useGSAP } from "@gsap/react";
 import TextCopy from "./TextCopy";
 import styles from "../styles/contacts.module.scss";
 
@@ -48,41 +49,33 @@ export default Contacts;
 const Cursor = ({ boundary, cursor, copyStatus }: { boundary: any; cursor: any; copyStatus: any }) => {
   const cursorRef = useRef<HTMLDivElement>(null);
 
-  useEffect(() => {
-    if (!boundary.current) return;
+  // useGSAP(() => {
+  //   //Move cursor
+  //   let xMoveCursor = gsap.quickTo(cursorRef.current, "left", {
+  //     duration: 0.2,
+  //     ease: "power3",
+  //   });
 
-    // Move cursor
-    let xMoveCursor = gsap.quickTo(cursorRef.current, "left", {
-      duration: 0.2,
-      ease: "power3",
-    });
+  //   let yMoveCursor = gsap.quickTo(cursorRef.current, "top", {
+  //     duration: 0.2,
+  //     ease: "power3",
+  //   });
 
-    let yMoveCursor = gsap.quickTo(cursorRef.current, "top", {
-      duration: 0.2,
-      ease: "power3",
-    });
+  //   if (boundary.current) {
+  //     boundary.current.addEventListener("mousemove", (e: MouseEvent) => {
+  //       const boundaryRect = boundary.current.getBoundingClientRect();
+  //       const { clientX, clientY } = e;
 
-    const handleMouseMove = (e: MouseEvent) => {
-      const boundaryRect = boundary.current.getBoundingClientRect();
-      const { clientX, clientY } = e;
-      const xPosition = clientX - boundaryRect.left;
-      const yPosition = clientY - boundaryRect.top;
+  //       const xPosition = clientX - boundaryRect.left;
+  //       const yPosition = clientY - boundaryRect.top;
 
-      xMoveCursor(xPosition);
-      yMoveCursor(yPosition);
 
-      console.log("Mouse move:", { xPosition, yPosition }); // Debug log
-    };
+  //       xMoveCursor(xPosition);
 
-    boundary.current.addEventListener("mousemove", handleMouseMove);
-
-    // Cleanup on unmount
-    return () => {
-      if (boundary.current) {
-        boundary.current.removeEventListener("mousemove", handleMouseMove);
-      }
-    };
-  }, [boundary]);
+  //       yMoveCursor(yPosition);
+  //     });
+  //   }
+  // }, [boundary]);
 
   //Const text to show
   const textToShow = copyStatus.copied && copyStatus.index === cursor.index ? "Copied" : !copyStatus.copied && cursor.index === 0 || copyStatus.copied && copyStatus.index !== 0 ? "Copy Email" : !copyStatus.copied && cursor.index === 1 || copyStatus.copied && copyStatus.index !== 1 ? "Copy Number" : "Error"

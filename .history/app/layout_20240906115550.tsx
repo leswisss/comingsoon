@@ -48,7 +48,7 @@ export default function RootLayout({
         className={`${italic.variable} ${regular.variable} ${medium.variable} ${semibold.variable}`}
       >
         {children}
-        <Analytics />
+        
       </body>
     </html>
   );

@@ -1,4 +1,4 @@
-import { Analytics } from "@vercel/analytics/react"
+
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "../styles/globals.scss";
@@ -48,7 +48,6 @@ export default function RootLayout({
         className={`${italic.variable} ${regular.variable} ${medium.variable} ${semibold.variable}`}
       >
         {children}
-        <Analytics />
       </body>
     </html>
   );

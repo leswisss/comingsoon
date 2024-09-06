@@ -11,11 +11,11 @@ const Contacts = () => {
   const textContent = [
     {
       header: "General Inquiries",
-      text: "hello@bettermarque.com",
+      text: "projects@bettermarque.com",
     },
     {
       header: "Phone",
-      text: "00237 654 570 096",
+      text: "+237 693 370 638",
     },
   ];
 

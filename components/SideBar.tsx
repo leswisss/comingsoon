@@ -21,19 +21,19 @@ const SideBar = ({ activeSideBar, setActiveSideBar }: SideBarProps) => {
   const links = [
     {
       name: "Instagram",
-      link: "/",
+      link: "https://www.instagram.com/bettermarque/",
     },
     {
       name: "Facebook",
-      link: "/",
+      link: "https://web.facebook.com/profile.php?id=61555159313413",
     },
     {
       name: "Twitter(X)",
-      link: "/",
+      link: "https://x.com/bettermarque",
     },
     {
       name: "Whatsapp",
-      link: "/",
+      link: "https://wa.me/+237693370638",
     },
   ];
 
@@ -89,7 +89,7 @@ const SideBar = ({ activeSideBar, setActiveSideBar }: SideBarProps) => {
                 <span className={styles.grey}>Socials</span>
                 <div className={styles.socials}>
                   {links.map((link, i) => (
-                    <Link href={link.link} key={`li-${i}`}>
+                    <Link href={link.link} key={`li-${i}`} target="_blank">
                       <HoverAnimation text={`${link.name}`}/>
                     </Link>
                   ))}

@@ -28,11 +28,10 @@ const italic = localFont({
 
 export const metadata: Metadata = {
   title: "Better Marque - Branding Agency",
-  description:
-    "Better Marque is a distinguished creative agency that specializes in the art of crafting innovative brand identities and refined websites for architects, builders, and real estate agents.",
+  description: "Better Marque is a distinguished creative agency that specializes in the art of crafting innovative brand identities and refined websites for architects, builders, and real estate agents.",
   twitter: {
     card: "summary_large_image",
-  },
+  }
 };
 
 export default function RootLayout({

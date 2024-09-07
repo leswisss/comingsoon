@@ -1,6 +1,6 @@
 .sidebar {
   width: 100vw;
-  height: 100dvh;
+  height: 100vh;
   position: fixed;
   top: 0;
   right: 0;
@@ -12,12 +12,12 @@
 
 .sidebar_wrapper {
   width: 100vw;
-  height: 100dvh;
+  height: 100vh;
   min-width: 100vw;
 }
 
 .side__container {
-  height: 100dvh;
+  height: 100vh;
   padding: 2rem 0 3rem;
   display: flex;
   flex-direction: column;
@@ -47,7 +47,7 @@
 }
 
 .content {
-  height: calc(87dvh - 5rem);
+  height: calc(87vh - 5rem);
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -157,7 +157,7 @@
   }
 
   .content {
-    height: calc(87dvh - 3.5rem);
+    height: calc(87vh - 3.5rem);
     width: 100%;
     display: flex;
     gap: 5rem;
@@ -204,7 +204,7 @@
   }
 
   .content {
-    height: calc(87dvh - 3.5rem);
+    height: calc(87vh - 3.5rem);
 
     .left__content {
       gap: 1.5rem;

@@ -16,8 +16,7 @@
   cursor: pointer;
   width: max-content;
   transition: color 0.5s ease;
-  text-decoration: none !important;
-  color: white;
+  text-decoration: none;
 
   &.not_active{
     color: var(--grey)
@@ -42,4 +41,8 @@
   .text{
     font-size: calc(var(--h1-font-size) - 1rem);
   }
+}
+
+@media screen and (max-width: 460px) {
+  
 }

@@ -34,7 +34,7 @@ const Clock = () => {
 
   return (
     <p className={styles.time}>
-      Yaoundé, Cameroon ({time.slice(0, 2)}
+      Yaound, Cameroon ({time.slice(0, 2)}
       <span className={showColon ? "" : styles.blink}>:</span>
       {time.slice(3)})
     </p>

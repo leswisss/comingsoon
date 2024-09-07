@@ -29,7 +29,7 @@ const italic = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Better Marque | Branding Agency Helping You Stand Out In Your Industry.",
+  title: "Better Marque | Branding Agency branding agency dedicated to helping you stand out in your industry.",
   description:
     "Better Marque is a distinguished creative agency dedicated to helping Architects, Builders, and Real Estate Agents stand out in their industries. We create unique websites and brand identities that elevate their presence and help them close more clients.",
   twitter: {
